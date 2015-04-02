@@ -4,11 +4,11 @@ We are just getting started here,
 This utilizes Less CSS and Gulp to compile the CSS and JavaScript/jQuery
 
 ## Getting Started
-- In your CLI of choice (Terminal, iTerm, etc) run `npm install`
+- in your CLI of choice (Terminal, iTerm, etc) run `npm install` from the root directory of this project (it has to be on the same level as the package.json file
 - run `gulp`
 - thats it! (so far)
 
-## The Rundown
+## The Rundown (Overview)
 
 Your Less files will automatically compile into a main.css file within a styles folder (gulp does all of this) and you are up and running.
 This is build for fully responsive site(s)
