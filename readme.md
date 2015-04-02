@@ -1,11 +1,12 @@
 ## Just The Beginning
 
-We are just getting started here, 
-This utilizes Less CSS and Gulp to compile the CSS and JavaScript/jQuery
+- First off, we are just getting started here, this is very premature.
+- This utilizes Less CSS and Gulp to compile the CSS and JavaScript/jQuery
+- It's also using NPM and Node.js so you will need to have Node installed in order to run Gulp and  automatic compiling.
 
 ## Getting Started
 - in your CLI of choice (Terminal, iTerm, etc) run `npm install` from the root directory of this project (it has to be on the same level as the package.json file
-- run `gulp`
+- when that finishes, run `gulp`
 - thats it! (so far)
 
 ## The Rundown (Overview)
