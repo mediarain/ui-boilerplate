@@ -1,0 +1,78 @@
+/**************************************************************************************************
+ *  Rain CSS Coding Standards outlined at http://standards.mediarain.com/html-css
+ *
+ *      @Section: Applies to all page sections
+ *      **Search for @ symbol or @Section: to search by category
+ *
+ *      Color Reference:
+ *          white: #FFFFFF
+ *          black: #000000
+ *           gray: #333333
+ *
+ *      Font-Family Reference:
+ *                              Helvetica
+ *                                      Arial
+ *
+ *
+***************************************************************************************************/
+/**************************************************************************************************
+ *
+ *  @Section: Varaibles
+ *
+***************************************************************************************************/
+// colors
+@black: #000000;
+@dark-gray: #333333;
+@yellow: yellow;
+@olive: olive;
+
+//  media query breakpoints
+@breakpoint: 767px;
+@tablet-landscape: 1024px;
+@tablet-portrait: 768px;
+@mobile: 320px;
+
+
+/**************************************************************************************************
+ *
+ *  @Section: Mixins
+ *
+***************************************************************************************************/
+.clear {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+}
+
+.centered-vertically(@y: -50%;) {
+  -webkit-transform: translateY(@y);
+  -ms-transform: translateY(@y);
+  transform: translateY(@y);
+}
+
+.centered-all(@x: -50%, @y: -50%) {
+  -webkit-transform: translate(@x, @y);
+  -ms-transform: translate(@x, @y);
+  transform: translate(@x, @y);
+}
+
+
+/**************************************************************************************************
+ *
+ *  @Section: Imports
+ *
+***************************************************************************************************/
+@import "reset";
+@import "global";
+// @import "mobile-first";
+
+
+
+
+
+
+
+
+
