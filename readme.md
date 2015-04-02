@@ -14,7 +14,7 @@
 Your Less files will automatically compile into a main.css file within a styles folder (gulp does all of this) and you are up and running.
 This is build for fully responsive site(s)
 It offer 2 options: desktop first and mobile first responsive styling which is handled in /less/main.less by importing the different Less files.
-We are using Meyers CSS Reset 2.0 to remove all browser default styles. [Link](http://meyerweb.com/eric/tools/css/reset/ )
+We are using [Meyers CSS Reset 2.0](http://meyerweb.com/eric/tools/css/reset/) to reset all default browser styles.
 
 ## Coming Soon
 Well.. a lot.
