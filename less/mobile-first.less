@@ -20,11 +20,11 @@
  *  @Section: Global Styles
  *
 ***************************************************************************************************/
-html { font-size: 62.5%; }
+html { font-size: 62.5%; } // Reset font-size to simplify useo of rem. 1rem == 10px, 1.4rem == 14px, etc.
 
 body {
   font-size: 1.4rem;
-  line-height: 1.3;
+  line-height: 1.3; // Should be relative to font-size, not restricted by a unit of measurement
   background: @dark-gray;
   font-family: arial, helvetica, sans-serif;
   color: @yellow;
