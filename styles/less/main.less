@@ -80,6 +80,18 @@
   box-sizing: border-box;
 }
 
+.columns(@col-count) {
+  -webkit-column-count: @col-count;
+  -ms-column-count: @col-count;
+  column-count: @col-count;
+}
+
+.column-gap(@col-margin) {
+  -webkit-column-gap: @col-margin;
+  -ms-column-gap: @col-margin;
+  column-gap: @col-margin;
+}
+
 
 /**************************************************************************************************
  *
