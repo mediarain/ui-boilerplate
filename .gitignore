@@ -1,7 +1,7 @@
 .DS_Store
 */node_modules
 node_modules
-*/styles
-styles
-*/scripts
-scripts
+*/styles/main.css
+styles/main.css
+*/js/main.js
+js/main.js
