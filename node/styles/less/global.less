@@ -54,6 +54,13 @@ img {
   display: block;
 }
 
+.browserupgrade {
+  background: @dark-gray;
+  color: @black;
+  margin: 20px 0;
+  padding: 20px 0;
+}
+
 .default-text {
 
   h1,
@@ -80,25 +87,25 @@ img {
 }
 
 .two-column-layout,
-.three-column-layout {
-  -webkit-column-gap: 5vw;
-  -ms-column-gap: 5vw;
-  column-gap: 5vw;
-}
-
-.two-column-layout {
-  -webkit-column-count: 2;
-  -ms-column-count: 2;
-  column-count: 2;
-}
-
-.three-column-layout {
-  -webkit-column-count: 3;
-  -ms-column-count: 3;
-  column-count: 3;
-}
-
+.three-column-layout { .column-gap(5vw); }
+.two-column-layout { .columns(2); }
+.three-column-layout { .columns(3); }
+.four-column-layout { .columns(4); }
 .center { text-align: center; }
+
+section {
+  position: relative;
+
+  &.rows {
+    margin: 0 auto 100px;
+
+    &.row-one {}
+    &.row-two {}
+    &.row-three {}
+    &.row-four {}
+    &.row-five {}
+  }
+}
 
 .container {
   width: @default-width;
@@ -231,20 +238,19 @@ header {
  *
 ***************************************************************************************************/
 section {
-  position: relative;
 
-  &.row-one h1 {
-    width: 550px;
-    font-size: 6rem;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    .centered-both;
+  &.row-one {
+
+    h1 {
+      width: 550px;
+      font-size: 6rem;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      .centered-both;
+    }
   }
-
-  &.row-two,
-  &.row-three { padding: 50px 0; }
 }
 
 
@@ -293,32 +299,18 @@ section {
   }
 
   .two-column-layout,
-  .three-column-layout {
-    -webkit-column-gap: 0;
-    -ms-column-gap: 0;
-    column-gap: 0;
-  }
-
+  .three-column-layout { .column-gap(0); }
   .two-column-layout,
-  .three-column-layout {
-    -webkit-column-count: 1;
-    -ms-column-count: 1;
-    column-count: 1;
-  }
+  .three-column-layout,
+  .four-column-layout { .columns(1); }
 
   section.row-one {
-    
+
     h1 {
       width: 60vw;
       font-size: 2.5rem;
-      text-align: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      .centered-both();
     }
   }
-  
 }
 
 
