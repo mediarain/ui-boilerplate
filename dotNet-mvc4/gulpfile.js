@@ -6,20 +6,21 @@ var gulp                     = require('gulp')
       , runSequence     = require('run-sequence')
       , concat                = require('gulp-concat')
       , minifyCss           = require('gulp-minify-css')
+      , rename              = require('gulp-rename')
       , uglify                   = require('gulp-uglify')
 
-      , styleBase            = 'styles/'
+      , styleBase            = 'Content/'
       , styleSource        = styleBase + 'less/'
       , watchLessFiles  = styleSource + '/**/*.less'
       , lessFiles             = styleSource + '/**/main.less'
 
-      , jsBase                = 'js/'
+      , jsBase                = 'Scripts/'
       , jsSource             = jsBase + 'lib/'
       , watchJsFiles       = jsSource + '/**/*.js'
       ;
 
 gulp.task('default', function (cb) {
-  runSequence(['less', 'js'], cb);
+  runSequence(['less', 'js', 'cssMinification'], cb);
 });
 
 gulp.task('less', function() {
@@ -27,6 +28,13 @@ gulp.task('less', function() {
   .pipe(less())
   // .pipe(minifyCss()) // Use when ready to go to production - minify/uglify
   .pipe(concat('main.css'))
+  .pipe(gulp.dest(styleBase))
+});
+
+gulp.task('cssMinification', function() {
+  return gulp.src(styleBase + 'main.css')
+  .pipe(minifyCss()) // Use when ready to go to production - minify/uglify
+  .pipe(rename('main.min.css'))
   .pipe(gulp.dest(styleBase))
 });
 
@@ -38,7 +46,7 @@ gulp.task('js', function() {
 });
 
 gulp.watch(watchLessFiles, function(cb) {
-  runSequence('less');
+  runSequence('less', 'cssMinification');
 });
 
 gulp.watch(watchJsFiles, function(cb) {

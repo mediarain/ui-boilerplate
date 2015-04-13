@@ -1,4 +1,4 @@
-﻿/**********************************************************************************************************************
+/**********************************************************************************************************************
  *  Rain CSS Coding Standards outlined at http://standards.mediarain.com/html-css
  *
  *      @Section: Applies to all page sections
@@ -27,7 +27,7 @@
  *
 ***************************************************************************************************/
 .clear {
-  content: 'aww shit';
+  content: '';
   display: block;
   clear: both;
   height: 0;
@@ -352,7 +352,7 @@ header .nav {
   transform: translateY(-50%);
 }
 header .nav:after {
-  content: 'aww shit';
+  content: '';
   display: block;
   clear: both;
   height: 0;
@@ -487,4 +487,3 @@ section.row-three {
     transform: translate(-50%, -50%);
   }
 }
-/*# sourceMappingURL=main.css.map */
