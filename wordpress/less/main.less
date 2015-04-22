@@ -1,0 +1,112 @@
+/*
+Theme Name: uiboilerplate
+Theme URI: https://github.com/mediarain/ui-boilerplate/
+Author: Rain Agency
+Author URI: http://rain.agency
+Description: UI Boilerplate theme for wordpress
+Version: 1.0.0
+License: The MIT License (MIT)
+License URI: http://opensource.org/licenses/MIT
+Text Domain: uiboilerplate
+*/
+
+/**********************************************************************************************************************
+ *  Rain CSS Coding Standards outlined at http://standards.mediarain.com/html-css
+ *
+ *      @Section: Applies to all page sections
+ *      **Search for @ symbol or @Section: to search by category
+ *
+ *      Color Reference:
+ *      - White: #FFFFFF - @white
+ *      - Black: #000000 - @black
+ *      - Gray: #333333 - @gray
+ *
+ *      Font-Family Reference:
+ *      - Helvetica
+ *      - Arial
+ *      - Sans-Serif
+ *
+ *
+***********************************************************************************************************************/
+/**************************************************************************************************
+ *
+ *  @Section: Varaibles
+ *
+***************************************************************************************************/
+// colors
+@white:		#FFFFFF;
+@black:		#000000;
+@dark-gray:	#333333;
+@yellow:		yellow;
+@olive:			olive;
+
+//  media query breakpoints
+@default-width:		80%;
+@default-min-width:	728px; // At the smallest width for desktop, this will provide a little padding on the sides.
+
+@breakpoint:			767px;
+@tablet-landscape:	1024px;
+@tablet-portrait:		768px;
+@mobile:				320px;
+@desktop:				1200px;
+
+// Fonts
+@font-main: Arial, Helvetica, Sans-Serif;
+@font-2: ;
+
+// Setting Default Content Colors, Widths, Etc.
+@text-color:			@yellow;
+@link-color:			@yellow;
+@input-color:			@yellow;
+@link-hover-color:		@olive;
+
+
+/**************************************************************************************************
+ *
+ *  @Section: Mixins
+ *
+***************************************************************************************************/
+.clear {
+  content: 'aww shit';
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+}
+
+.centered-vertically(@y: -50%;) {
+  -webkit-transform: translateY(@y);
+  -ms-transform: translateY(@y);
+  transform: translateY(@y);
+}
+
+.centered-both(@x: -50%, @y: -50%) {
+  -webkit-transform: translate(@x, @y);
+  -ms-transform: translate(@x, @y);
+  transform: translate(@x, @y);
+}
+
+.simple-width() {  // Prevent padding from effecting width
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+/**************************************************************************************************
+ *
+ *  @Section: Imports
+ *
+***************************************************************************************************/
+@import "reset";
+@import "global";
+// @import "mobile-first";
+
+
+
+
+
+
+
+
+
