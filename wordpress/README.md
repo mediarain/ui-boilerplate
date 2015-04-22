@@ -24,6 +24,10 @@ This is built for fully responsive site(s)
 It offer 2 options: desktop first and mobile first responsive styling which is handled in /less/main.less by importing the different Less files.
 We are using [Meyers CSS Reset 2.0](http://meyerweb.com/eric/tools/css/reset/) to reset all default browser styles.
 
+You can change the theme's name to your new project by changing /less/main.less file 2 line "Theme Name: uiboilerplate".
+
+You can also update the "screenshot.png" image to your new project screenshot.
+
 ## Coming Soon
 Well.. a lot.
 
