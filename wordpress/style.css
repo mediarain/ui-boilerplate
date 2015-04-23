@@ -38,7 +38,7 @@ Text Domain: uiboilerplate
  *
 ***************************************************************************************************/
 .clear {
-  content: 'aww shit';
+  content: '';
   display: block;
   clear: both;
   height: 0;
@@ -365,7 +365,7 @@ header .nav {
   transform: translateY(-50%);
 }
 header .nav:after {
-  content: 'aww shit';
+  content: '';
   display: block;
   clear: both;
   height: 0;
