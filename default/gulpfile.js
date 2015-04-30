@@ -22,13 +22,13 @@ var gulp                   = require('gulp')
     , watchJsFiles         = jsSource + '/**/*.js'
     ;
 
-gulp.task('default', function (cb) {
-  runSequence(['less', 'js'], cb);
-});
-
 gulp.task('less', function() {
   return gulp.src(lessFiles)
   .pipe(less())
+  .on('error', function(err) {
+    console.log(err);
+    this.emit('end');
+  })
   .pipe(concat('main.css'))
   .pipe(autoprefixer({
     browsers: ['last 2 versions'],
@@ -57,15 +57,9 @@ gulp.task('buildJs', function(){
   .pipe(gulp.dest(jsBase))
 });
 
-gulp.watch(watchLessFiles, function(cb) {
-  runSequence('less');
+gulp.task('default', function (cb) {
+  gulp.watch(watchLessFiles, ['less']);
+  gulp.watch(watchJsFiles, ['js']);
+  runSequence(['less', 'js'], /* ['buildCss','buildJs'], */ cb);
 });
 
-gulp.watch(watchJsFiles, function(cb) {
-  runSequence('js');
-});
-
-/* Use when going to production to minify css and js */
-gulp.task('build', function(){
-  runSequence('buildCss', 'buildJs');
-});

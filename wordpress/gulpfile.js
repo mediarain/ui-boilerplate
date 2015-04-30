@@ -22,18 +22,25 @@ var gulp                   = require('gulp')
     , watchJsFiles         = jsSource + '/**/*.js'
     ;
 
-gulp.task('default', function (cb) {
-  runSequence(['less', 'js'], cb);
-});
-
 gulp.task('less', function() {
   return gulp.src(lessFiles)
   .pipe(less())
+  .on('error', function(err) {
+    console.log(err);
+    this.emit('end');
+  })
   .pipe(concat('style.css'))
   .pipe(autoprefixer({
     browsers: ['last 2 versions'],
     cascade: false
   }))
+  .pipe(gulp.dest(styleBase))
+});
+
+gulp.task('minifyCss', function(){
+  return gulp.src(cssBuild)
+  .pipe(minifyCss())
+  .pipe(rename({ suffix: '.min' }))
   .pipe(gulp.dest(styleBase))
 });
 
@@ -43,29 +50,16 @@ gulp.task('js', function() {
   .pipe(gulp.dest(jsBase))
 });
 
-gulp.task('buildCss', function(){
-  return gulp.src(cssBuild)
-  .pipe(minifyCss())
-  .pipe(rename({ suffix: '.min' }))
-  .pipe(gulp.dest(styleBase))
-});
-
-gulp.task('buildJs', function(){
+gulp.task('minifyJs', function(){
   return gulp.src(jsBuild)
   .pipe(uglify())
   .pipe(rename({ suffix: '.min' }))
   .pipe(gulp.dest(jsBase))
 });
 
-gulp.watch(watchLessFiles, function(cb) {
-  runSequence('less');
+gulp.task('default', function (cb) {
+  gulp.watch(watchLessFiles, ['less']);
+  gulp.watch(watchJsFiles, ['js']);
+  runSequence(['less', 'js'], cb);
 });
 
-gulp.watch(watchJsFiles, function(cb) {
-  runSequence('js');
-});
-
-/* Use when going to production to minify css and js */
-gulp.task('build', function(){
-  runSequence('buildCss', 'buildJs');
-});
