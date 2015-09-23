@@ -37,7 +37,7 @@ gulp.task('less', function() {
   .pipe(gulp.dest(styleBase))
 });
 
-gulp.task('js', function() {
+gulp.task('jsLib', function() {
   return gulp.src(watchJsFiles)
   .pipe(concat('libs.js'))
   .pipe(uglify())
@@ -54,6 +54,6 @@ gulp.task('minCss', function(){
 
 gulp.task('default', function (cb) {
   gulp.watch(watchLessFiles, ['less']);
-  gulp.watch(watchJsFiles, ['js']);
-  runSequence(['less', 'js'], /* ['minCss'], */ cb);
+  gulp.watch(watchJsFiles, ['jsLib']);
+  runSequence(['less', 'jsLib'], /* ['minCss'], */ cb);
 });
