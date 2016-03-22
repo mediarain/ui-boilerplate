@@ -8,7 +8,6 @@
 
 var gulp					= require( 'gulp' )
 	, less					= require( 'gulp-less' )
-	, indent				= require( './custom-gulp/indent' )
 	, watch					= require( 'gulp-watch' )
 	, runSequence			= require( 'run-sequence' )
 	, concat				= require( 'gulp-concat' )
@@ -43,12 +42,10 @@ gulp.task( 'less', function() {
 		browsers: ['last 4 versions'],
 		cascade: false
 	}))
-	.pipe(indent({
-		tabs: true,
-		amount: 1
-	}))
 	.pipe( gulp.dest( styleBase ) )
-	// .pipe( minifyCss( {compatibility: 'ie9'} ) )
+	.pipe( concat( 'style.min.css' ) )
+	.pipe( minifyCss( {compatibility: 'ie9'} ) )
+	.pipe( gulp.dest( styleBase ) )
 });
 
 gulp.task( 'js_libs', function() {
@@ -80,9 +77,8 @@ gulp.task('phpcs', function () {
 
 gulp.task( 'default', function (cb) {
 	gulp.watch( watchLessFiles, ['less'] );
-	gulp.watch( watchLessFiles, ['liveChatLess'] );
 	gulp.watch( watchJsLibFiles, [ 'js_libs' ] );
 	gulp.watch( [jsSlides, jsTemplates, jsMain], [ 'min_js_main' ] );
 
-	runSequence( [ 'less', 'liveChatLess', 'js_libs', 'min_js_main' ], cb );
+	runSequence( [ 'less', 'js_libs', 'min_js_main' ], cb );
 });
