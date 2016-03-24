@@ -21,17 +21,19 @@ $CSC_STANDARDS_DIRECTORY/vendor/bin/phpcs --extensions=php -n --ignore=node_modu
 
 set -o xtrace
 # js
-jscs scripts/main.js
-jscs scripts/**/*.js
-# jscs scripts/global.js
-# jscs scripts/slides/*.js
-# jscs scripts/templates/*.js
-jscs scripts/main.js
-jshint scripts/*.js
-# jshint scripts/global.js
-# jshint scripts/slides/*.js
-# jshint scripts/templates/*.js
-jshint scripts/main.js
+# jscs
+jscs js/**/*.js
+jscs js/global.js
+jscs js/main.js
+# jscs js/slides/*.js
+# jscs js/templates/*.js
+
+# jshint
+jshint js/*.js
+jshint js/global.js
+# jshint js/main.js
+# jshint js/slides/*.js
+# jshint js/templates/*.js
 
 # less
 lessc --lint less/main.less

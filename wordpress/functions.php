@@ -21,8 +21,7 @@ if ( ! function_exists( 'uiboilerplate_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function uiboilerplate_setup() {
-
-		/*
+		/**
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on uiboilerplate, use a find and replace
@@ -85,7 +84,7 @@ if ( ! function_exists( 'uiboilerplate_setup' ) ) :
 			'default-image' => '',
 		) ) );
 	}
-endif; // uiboilerplate_setup
+endif; /* uiboilerplate_setup */
 add_action( 'after_setup_theme', 'uiboilerplate_setup' );
 
 /**
