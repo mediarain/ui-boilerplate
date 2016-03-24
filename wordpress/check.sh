@@ -23,15 +23,15 @@ set -o xtrace
 # js
 # jscs
 jscs js/**/*.js
-jscs js/global.js
 jscs js/main.js
+# jscs js/global.js
 # jscs js/slides/*.js
 # jscs js/templates/*.js
 
 # jshint
 jshint js/*.js
-jshint js/global.js
-# jshint js/main.js
+jshint js/main.js
+# jshint js/global.js
 # jshint js/slides/*.js
 # jshint js/templates/*.js
 
