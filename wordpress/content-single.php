@@ -1,7 +1,12 @@
 <?php
 /**
+ * The template part for displaying a single content.
+ *
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
  * @package uiboilerplate
  */
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -10,8 +15,8 @@
 
 		<div class="entry-meta">
 			<?php uiboilerplate_posted_on(); ?>
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
+		</div> <!-- .entry-meta -->
+	</header> <!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php the_content(); ?>
@@ -21,9 +26,9 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
+	</div> <!-- .entry-content -->
 
 	<footer class="entry-footer">
 		<?php uiboilerplate_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+	</footer> <!-- .entry-footer -->
+</article> <!-- #post-## -->

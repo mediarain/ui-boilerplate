@@ -6,12 +6,10 @@
  *
  * @package uiboilerplate
  */
+
 ?>
 
 	</div> <!-- /.wrapper -->
-
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 	<script>

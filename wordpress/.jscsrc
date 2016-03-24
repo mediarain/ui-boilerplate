@@ -1,0 +1,10 @@
+{
+	"preset": "airbnb",
+	"excludeFiles": ["scripts/libs/**"],
+	"validateIndentation": null,
+	"disallowSpacesInsideParentheses": null,
+	"disallowSpaceAfterPrefixUnaryOperators": ["++", "--", "+", "-", "~"],
+	"requirePaddingNewLinesAfterBlocks": {
+			"allExcept": ["inCallExpressions"]
+	}
+}

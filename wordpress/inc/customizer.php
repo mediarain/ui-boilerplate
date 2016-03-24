@@ -1,6 +1,6 @@
 <?php
 /**
- * uiboilerplate Theme Customizer
+ * Theme Customizer
  *
  * @package uiboilerplate
  */
