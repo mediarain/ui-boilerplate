@@ -22,8 +22,8 @@ var gulp					= require( 'gulp' )
 	, watchLessFiles		= styleSource + '/**/*.less'
 	, lessFiles				= styleSource + '/**/main.less'
 
-	, jsBase				= 'scripts/'
-	, jsLib					= jsBase + 'lib/'
+	, jsBase				= 'js/'
+	, jsLib					= jsBase + 'libs/'
 	, jsSlides				= jsBase + 'slides/**/*.js'
 	, jsTemplates			= jsBase + 'templates/**/*.js'
 	, jsMain				= jsBase + 'main.js'
