@@ -9,3 +9,285 @@ License: The MIT License (MIT)
 License URI: http://opensource.org/licenses/MIT
 Text Domain: uiboilerplate
 */
+/**************************************************************************************************
+ *
+ *  @Section: Imports
+ *
+***************************************************************************************************/
+/* Global */
+/**************************************************************************************************
+ *
+ *	@Section: Variables
+ *
+***************************************************************************************************/
+/* media query breakpoints */
+/**************************************************************************************************
+ *
+ *  @Section: Mixins
+ *
+***************************************************************************************************/
+.clear {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+}
+/**************************************************************************************************
+ *
+ *	@Section: Reset Default Browser Styles
+ *
+***************************************************************************************************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*:focus {
+  outline: none !important;
+}
+/**********************************************************************************************************************
+ *  Rain CSS Coding Standards outlined at http://standards.mediarain.com/html-css
+ *
+ *      @Section: Applies to all page sections
+ *      **Search for @ symbol or @Section: to search by category
+ *
+ *      Color Reference:
+ *      - White: #FFFFFF - @white
+ *      - Black: #000000 - @black
+ *      - Gray: #333333 - @gray
+ *
+ *      Font-Family Reference:
+ *      - Helvetica
+ *      - Arial
+ *      - Sans-Serif
+ *
+ *
+***********************************************************************************************************************/
+/**************************************************************************************************
+ *
+ *  @Section: Global Styles
+ *
+***************************************************************************************************/
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.4rem;
+  line-height: 1.3;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+a:hover {
+  text-decoration: none;
+}
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.default-text h1,
+.default-text h2,
+.default-text h3,
+.default-text h4,
+.default-text h5 {
+  margin-bottom: 20px;
+}
+.default-text h1 {
+  font-size: 2.4rem;
+}
+.default-text h2 {
+  font-size: 2rem;
+}
+.default-text h3 {
+  font-size: 1.6rem;
+}
+.default-text h4 {
+  font-size: 1.4rem;
+}
+.default-text h5 {
+  font-size: 1rem;
+}
+.default-text p,
+.default-text ul,
+.default-text ol {
+  margin-bottom: 10px;
+}
+.default-text ul,
+.default-text ol {
+  margin-left: 20px;
+}
+.default-text ul {
+  list-style: disc;
+}
+.default-text ol {
+  list-style: decimal;
+}
+.two-column-layout,
+.three-column-layout {
+  -webkit-column-gap: 5vw;
+  -ms-column-gap: 5vw;
+  -moz-column-gap: 5vw;
+  column-gap: 5vw;
+}
+.two-column-layout {
+  -webkit-column-count: 2;
+  -ms-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+}
+.three-column-layout {
+  -webkit-column-count: 3;
+  -ms-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+}
+.center {
+  text-align: center;
+}
+.container {
+  width: 80%;
+  min-width: 748px;
+  margin: 0 auto;
+  position: relative;
+}
+/**************************************************************************************************
+ *
+ *	@Section: Header & Nav Styles
+ *
+***************************************************************************************************/
+/**************************************************************************************************
+ *
+ *	@Section: Mobile Styles
+ *
+***************************************************************************************************/
